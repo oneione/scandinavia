@@ -119,7 +119,7 @@ a {
   color: #ffffff;
 }
 .footer__wrap {
-  padding: 2.5em 0 0.625em;
+  padding: 0.625em 0 0.625em;
 }
 .footer__contacts-wrap {
   padding: 0.75em 0 0.75em;
@@ -160,10 +160,6 @@ a {
 }
 .footer__contacts .address,
 .footer__contacts .tel {
-<<<<<<< HEAD
-  font-family: 'helveticaneuecyr-light', 'Arial', sans-serif, serif;
-=======
->>>>>>> origin/master
   font-size: 0.8125em;
   line-height: 1.2;
 }
@@ -173,25 +169,21 @@ a {
   margin-bottom: 0.625em;
 }
 .footer__legal-info p {
-<<<<<<< HEAD
-  font-family: 'helveticaneuecyr-light', 'Arial', sans-serif, serif;
-  font-size: 0.8125em;
-  line-height: inherit;
-}
-.developed-by {
-  text-align: right;
-  font-family: 'helveticaneuecyr-light', 'Arial', sans-serif, serif;
-  font-size: 0.8125em;
-  line-height: inherit;
-=======
   font-size: 0.8125em;
 }
 .developed-by {
   text-align: right;
   font-size: 0.8125em;
->>>>>>> origin/master
 }
 .developed-by a:hover {
   text-decoration: underline;
+}
+.main-wrap {
+  min-height: 100%;
+  margin-bottom: -10.625em;
+}
+.push,
+.footer {
+  height: 10.625em;
 }
 /* end footer styles */

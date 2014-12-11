@@ -59,6 +59,7 @@
 @wrap-max-width:1200px;
 @wrap-gutter: 45em/@bfz; // em?
 @wrap-abs-width: 960;
+@wrap-rel-width: 85%;
 
 @bfz: 16px;
 
@@ -82,7 +83,7 @@ body{
 }
 
 .wrap{
-  width: 85%;
+  width: @wrap-rel-width;
   max-width: @wrap-max-width;
   margin:0 auto;
 }

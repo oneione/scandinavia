@@ -20,7 +20,7 @@
     <script src="js/modernizr-2.6.2.min.js"></script>
 </head>
 
-<body>
+<body class="home">
 
     <div class="main-wrap">
 
@@ -54,7 +54,9 @@
 
                     <header class="content-header">
                         <div class="content__logo-wrap">
-                            <a href="index.html"><img src="img/logo.png" alt="River House"/></a>
+                            <div class="img-wrap">
+                                <a href="index.html"><img src="img/logo.png" alt="River House"/></a>
+                            </div>
                         </div>
                         <nav class="main-menu">
                             <ul>
@@ -72,7 +74,14 @@
 
                     <div class="page-content">
 
-                        <div class="main-slider fotorama" data-width="1600" data-arrows="false" data-fit="cover">
+                        <div class="main-slider fotorama"
+                             data-width="100%"
+                             data-height="100%"
+                             data-maxwidth="1600"
+                             data-maxheight="1600"
+                             data-minheight="200"
+                             data-arrows="false" data-fit="cover">
+
                             <img src="img/slider-pic1.jpg" alt=""/>
                             <img src="img/slider-pic2.jpg" alt=""/>
                             <img src="img/slider-pic3.jpg" alt=""/>
@@ -83,10 +92,9 @@
                 </div><!-- end page-content-wrap -->
             </div><!-- end wrap -->
         </section><!-- end page-wrap -->
-
     </div> <!-- end main-wrap -->
 
-
+    <div class="push"></div>
     <footer class="footer">
         <div class="wrap">
             <div class="footer__wrap">
@@ -124,7 +132,7 @@
                     <p>Обращаем Ваше внимание на то, что данный интернет сайт носит исключительно информационный характер и ни при каких условиях информационные материалы и цены, размещенные на сайте, не являются публичной офертой, определяемой положениями статьи 437 Гражданского кодекса РФ</p>
                 </div>
 
-                <p class="developed-by">Cайт разработан в студии <a href="oneione.ru" target="_blank">oneione</a></p>
+                <p class="developed-by">Cайт разработан в студии <a href="http://oneione.ru" target="_blank">oneione</a></p>
 
             </div>
         </div>

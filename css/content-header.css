@@ -119,11 +119,15 @@ a {
   padding: 0.375em 0 0.5em;
   text-align: center;
 }
+.content__logo-wrap .img-wrap {
+  max-width: 8.75em;
+  margin: 0 auto;
+}
 .content__logo-wrap img {
   max-width: 100%;
 }
 .main-menu {
-  padding: 0.625em 0 0 0;
+  padding: 0.3125em 0 0 0;
   margin-bottom: -1.2em;
 }
 .main-menu > ul {
@@ -148,7 +152,7 @@ a {
   width: 100%;
 }
 .main-menu > ul > li {
-  margin-bottom: 0.9375em;
+  margin-bottom: 0.3125em;
 }
 .main-menu > ul > li a {
   font-family: 'helveticaneuecyr-roman', 'Arial', sans-serif, serif;
