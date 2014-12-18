@@ -71,6 +71,9 @@
 @media only screen and (max-width: 1023px) and (min-width: 481px) {
   
 }
+html {
+  overflow-x: hidden;
+}
 body {
   width: 100%;
   height: 100%;
@@ -78,10 +81,17 @@ body {
   font-size: 16px;
   line-height: 1.2;
   color: #000000;
-  background: #1490c2;
+  background: #00a0bc;
+  position: relative;
+  margin-left: 0;
+  -webkit-transition: margin-left 0.2s ease;
+  -moz-transition: margin-left 0.2s ease;
+  -ms-transition: margin-left 0.2s ease;
+  -o-transition: margin-left 0.2s ease;
+  transition: margin-left 0.2s ease;
 }
 .wrap {
-  width: 85%;
+  padding: 0 2.5em;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -112,6 +122,72 @@ a {
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.14);
   -moz-box-shadow: 0 0 24px rgba(0, 0, 0, 0.14);
   -webkit-box-shadow: 0 0 24px rgba(0, 0, 0, 0.14);
+}
+@media only screen and (max-width: 1023px) {
+  body {
+    font-size: 14px;
+  }
+  .wrap {
+    padding: 0 0.625em;
+  }
+  .page-content-wrap {
+    padding: 0.9375em 0.625em 3.75em;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .main-wrap {
+    background: #00a0bc;
+  }
+  .open-touch-menu {
+    overflow: hidden;
+  }
+  .open-touch-menu body {
+    margin-left: -17.1875em;
+    position: fixed;
+  }
+  .open-touch-menu .touch-menu__wrap {
+    right: 0;
+    overflow-y: scroll;
+  }
+  .open-touch-menu .touch-menu-control {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+@media only screen and (max-width: 480px) {
+  body {
+    background: #fff;
+    min-height: 38.333333333333336em;
+  }
+  .page-content-wrap {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
+  }
+  .main-wrap {
+    background: #fff;
+  }
+  .open-touch-menu {
+    overflow: hidden;
+  }
+  .open-touch-menu body {
+    margin-left: -17.1875em;
+    position: fixed;
+  }
+  .open-touch-menu .touch-menu__wrap {
+    right: 0;
+    overflow-y: scroll;
+  }
+  .open-touch-menu .touch-menu-control {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
 }
 /* end base project styles */
 /* page styles */

@@ -4,6 +4,8 @@
 
 .footer{
   color:@white;
+  position: relative;
+  z-index: 1;
 }
 
 .footer__wrap{
@@ -22,9 +24,14 @@
 .footer__logo-company{
   float:left;
   margin-bottom: 10em/@bfz;
-
+  width: 173/@wrap-abs-width * 100%;
+  min-width: 185em/@bfz;
   img{
     max-width: 100%;
+  }
+
+  &.footer__logo-company--tel{
+    display: none;
   }
 }
 
@@ -35,6 +42,11 @@
     .inline-block;
     max-width: 200em/@bfz;
     margin-left: 35em/@bfz;
+//    margin-left: 35/@wrap-abs-width * 100%;
+
+    &:first-child{
+      margin-left: 0;
+    }
   }
 
   .city{
@@ -70,6 +82,7 @@
 
 //and elems
 
+
 //dependencies:
 
 //sticky footer:
@@ -84,5 +97,65 @@
 }
 
 //end dependencies
+
+
+
+//******   IPad  *****\\
+@media only screen and (max-width: @ipad) {
+
+}
+//****** end IPad *****\\
+
+//******   tel  *****\\
+@media only screen and (max-width: @tel) {
+  .footer__contacts{
+    float: left;
+    width: 100%;
+    >li{
+      margin-left: 10em/@bfz;
+    }
+  }
+}
+//****** end tel *****\\
+
+//******   IPhone  *****\\
+@media only screen and (max-width: @iphone) {
+
+  @bfz: 14px;
+
+  .footer{
+    color:@black;
+
+  }
+
+  .footer__contacts-wrap, .footer__legal-info{
+    border-color:#cccccc;
+  }
+
+  .footer__logo-company{
+    display: none;
+    &.footer__logo-company--tel{
+      display: block;
+    }
+  }
+
+  .footer__contacts{
+    display: none;
+  }
+
+  .main-wrap{
+    margin-bottom: -196em/@bfz;
+  }
+
+  .push, .footer{
+    height: 196em/@bfz;
+  }
+  .home{
+    .push{
+      display: none;
+    }
+  }
+}
+//****** end IPhone *****\\
 
 /* end footer styles */

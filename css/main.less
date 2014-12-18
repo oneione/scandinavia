@@ -40,8 +40,10 @@
     position: absolute;
     top:69em/@bfz;
     bottom:0em/@bfz;
-    left:(100% - @wrap-rel-width)/2;
-    right:(100% - @wrap-rel-width)/2;
+//    left:(100% - @wrap-rel-width)/2;
+//    right:(100% - @wrap-rel-width)/2;
+    left:@wrap-gutter-outer;
+    right:@wrap-gutter-outer;
     max-width: @wrap-max-width;
     .border-box;
   }
@@ -50,7 +52,7 @@
     position: absolute;
     left:@wrap-gutter;
     right: @wrap-gutter;
-    top:111em/@bfz;
+    top:131em/@bfz;
     bottom:0;
   }
 
@@ -82,7 +84,7 @@
 }
 
 .home{
-  @viewportWidth: 1200px/0.85;
+  @viewportWidth: 1110px/0.85;
   @media only screen and (min-width: @viewportWidth) {
       .page-content-wrap{
         width: 100%;
@@ -91,6 +93,33 @@
         margin-left:-@wrap-max-width/2;
       }
   }
+
+
+  //******   IPad  *****\\
+  @media only screen and (max-width: @ipad) {
+    .page-content-wrap{
+      margin-left: 0;
+      left: 0;
+      right: 0;
+    }
+    .page-content{
+      left:@wrap-gutter-outer_ipad;
+      right: @wrap-gutter-outer_ipad;
+      top:131em/@bfz;
+    }
+  }
+  //****** end IPad *****\\
+
+  //******   IPhone  *****\\
+  @media only screen and (max-width: @iphone) {
+      .page-content-wrap{
+        top:0;
+        bottom:auto;
+        height: 400em/@bfz;
+      }
+  }
+  //****** end IPhone *****\\
+
 }
 
 

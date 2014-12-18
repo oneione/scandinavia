@@ -21,26 +21,98 @@
 }
 
 .main-menu{
-  padding: 5em/@bfz 0 0 0;
+  padding: 7em/@bfz 0 0 0;
   margin-bottom:-1.2em;
 
   >ul{
     .justify();
+    
+    &:after{
+      height: 1px;
+      background: #cacaca;
+    }
 
     >li{
-      margin-bottom: 5em/@bfz;
+      margin-bottom: 10em/@bfz;
+      text-align: center;
 
       a{
         .helvetica-roman(1em,1);
       }
 
-      &:hover, .active{
+      &:hover, &.active{
         a{
           color:@blue;
+        }
+      }
+
+      &.active{
+        a{
+          .helvetica-bold(1em,1);
         }
       }
     }
   }
 }
+
+.touch-menu-control{
+  width: 47px;
+  height: 42px;
+  position: absolute;
+  top:0;
+  right:0;
+
+  background: url('../img/touch-menu-ico.png') no-repeat center;
+  display: none;
+  .transition(all);
+}
+
+
+//******   IPad  *****\\
+@media only screen and (max-width: @ipad) {
+  .main-menu{
+    >ul{
+      >li{
+        max-width: 100em/@bfz;
+      }
+    }
+  }
+
+}
+//****** end IPad *****\\
+
+//******   Tel  *****\\
+@media only screen and (max-width: @tel) {
+  .content__logo-wrap{
+    .img-wrap{
+      max-width: 100%;
+    }
+  }
+  .touch-menu-control{
+    display: block;
+  }
+  .main-menu{
+    display: none;
+  }
+}
+//****** end Tel *****\\
+
+//******   IPhone  *****\\
+@media only screen and (max-width: @iphone) {
+  .content__logo-wrap{
+    .img-wrap{
+      max-width: 100%;
+    }
+  }
+
+  .main-menu{
+    display: none;
+  }
+
+  .touch-menu-control{
+    display: block;
+  }
+}
+//****** end IPhone *****\\
 
 /* end content-header styles */

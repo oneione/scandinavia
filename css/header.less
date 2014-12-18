@@ -41,12 +41,14 @@
 .order-call__button{
   .button;
   width: 100%;
+  max-width: 180em/13;
   height: 18em/13;
   background: #fff;
   color:@blue;
 
   .border-radius(9em/13);
-  .helvetica-light(13em/@bfz,18em/13);
+  .helvetica-bold(13em/@bfz,18em/13);
+  text-align: center;
 
   margin-bottom: 1px;
   &:active{
@@ -58,6 +60,7 @@
 .header__address{
   float:right;
   margin-left: 20em/@bfz;
+  max-width: 210em/@bfz;
 
   p{
     color:@white;
@@ -65,6 +68,88 @@
   }
 }
 
+
+//touch menu:
+.touch-menu__wrap{
+  display: none;
+  position: fixed;
+  top:0;
+  right:-@touch-menu-width;
+  width: @touch-menu-width;
+  height: 100%;
+  padding: 40em/@bfz 10em/@bfz 40em/@bfz 30em/@bfz;
+
+  background: @blue;
+  .border-box;
+  .transition(right);
+}
+.touch-menu{
+  margin-bottom: 40em/@bfz;
+  ul>li{
+    margin-bottom: 5em/@bfz;
+    a{
+      .helvetica-roman(1em,1);
+      color:@white;
+    }
+
+    &.active{
+      a{
+        .helvetica-bold(1em,1);
+      }
+    }
+  }
+}
+.touch-contacts__wrap{
+  padding-top: 10em/@bfz;
+  border-top: 1px solid #bcbcbc;
+  .helvetica-roman(1em,22em/@bfz);
+  color:@white;
+
+  b, .order-call__button{
+    .helvetica-bold();
+  }
+}
+.touch-address{
+  margin-bottom: 5em/@bfz;
+}
+//end touch menu
+
 //end elems
+
+
+//******   IPad  *****\\
+@media only screen and (max-width: @ipad) {
+
+}
+//****** end IPad *****\\
+
+//******   Tel  *****\\
+@media only screen and (max-width: @tel) {
+
+  .header__address{
+    width: 100%;
+    max-width: 100%;
+    float:left;
+    margin-left: 0;
+    font-size: 13em/@bfz;
+    margin-top:-8em/@bfz;
+  }
+  .touch-menu__wrap{
+    display: block;
+  }
+
+}
+//****** end Tel *****\\
+
+//******   IPhone  *****\\
+@media only screen and (max-width: @iphone) {
+  .header{
+    display: none;
+  }
+  .touch-menu__wrap{
+    display: block;
+  }
+}
+//****** end IPhone *****\\
 
 /* end header styles */

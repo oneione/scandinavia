@@ -72,6 +72,9 @@
 @media only screen and (max-width: 1023px) and (min-width: 481px) {
   
 }
+html {
+  overflow-x: hidden;
+}
 body {
   width: 100%;
   height: 100%;
@@ -79,10 +82,17 @@ body {
   font-size: 16px;
   line-height: 1.2;
   color: #000000;
-  background: #1490c2;
+  background: #00a0bc;
+  position: relative;
+  margin-left: 0;
+  -webkit-transition: margin-left 0.2s ease;
+  -moz-transition: margin-left 0.2s ease;
+  -ms-transition: margin-left 0.2s ease;
+  -o-transition: margin-left 0.2s ease;
+  transition: margin-left 0.2s ease;
 }
 .wrap {
-  width: 85%;
+  padding: 0 2.5em;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -113,6 +123,72 @@ a {
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.14);
   -moz-box-shadow: 0 0 24px rgba(0, 0, 0, 0.14);
   -webkit-box-shadow: 0 0 24px rgba(0, 0, 0, 0.14);
+}
+@media only screen and (max-width: 1023px) {
+  body {
+    font-size: 14px;
+  }
+  .wrap {
+    padding: 0 0.625em;
+  }
+  .page-content-wrap {
+    padding: 0.9375em 0.625em 3.75em;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .main-wrap {
+    background: #00a0bc;
+  }
+  .open-touch-menu {
+    overflow: hidden;
+  }
+  .open-touch-menu body {
+    margin-left: -17.1875em;
+    position: fixed;
+  }
+  .open-touch-menu .touch-menu__wrap {
+    right: 0;
+    overflow-y: scroll;
+  }
+  .open-touch-menu .touch-menu-control {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+@media only screen and (max-width: 480px) {
+  body {
+    background: #fff;
+    min-height: 38.333333333333336em;
+  }
+  .page-content-wrap {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
+  }
+  .main-wrap {
+    background: #fff;
+  }
+  .open-touch-menu {
+    overflow: hidden;
+  }
+  .open-touch-menu body {
+    margin-left: -17.1875em;
+    position: fixed;
+  }
+  .open-touch-menu .touch-menu__wrap {
+    right: 0;
+    overflow-y: scroll;
+  }
+  .open-touch-menu .touch-menu-control {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
 }
 /* end base project styles */
 /* header styles */
@@ -159,15 +235,17 @@ a {
 }
 .order-call__button {
   width: 100%;
+  max-width: 13.846153846153847em;
   height: 1.3846153846153846em;
   background: #fff;
-  color: #1490c2;
+  color: #00a0bc;
   border-radius: 0.6923076923076923em;
   -webkit-border-radius: 0.6923076923076923em;
   -moz-border-radius: 0.6923076923076923em;
-  font-family: 'helveticaneuecyr-roman', 'Arial', sans-serif, serif;
+  font-family: 'helveticaneuecyr-bold', 'Arial', sans-serif, serif;
   font-size: 0.8125em;
   line-height: 1.3846153846153846em;
+  text-align: center;
   margin-bottom: 1px;
 }
 .order-call__button:active {
@@ -177,9 +255,86 @@ a {
 .header__address {
   float: right;
   margin-left: 1.25em;
+  max-width: 13.125em;
 }
 .header__address p {
   color: #ffffff;
   line-height: 1.375em;
+}
+.touch-menu__wrap {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: -17.1875em;
+  width: 17.1875em;
+  height: 100%;
+  padding: 2.5em 0.625em 2.5em 1.875em;
+  background: #00a0bc;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: right 0.2s ease;
+  -moz-transition: right 0.2s ease;
+  -ms-transition: right 0.2s ease;
+  -o-transition: right 0.2s ease;
+  transition: right 0.2s ease;
+}
+.touch-menu {
+  margin-bottom: 2.5em;
+}
+.touch-menu ul > li {
+  margin-bottom: 0.3125em;
+}
+.touch-menu ul > li a {
+  font-family: 'helveticaneuecyr-roman', 'Arial', sans-serif, serif;
+  font-size: 1em;
+  line-height: 1;
+  color: #ffffff;
+}
+.touch-menu ul > li.active a {
+  font-family: 'helveticaneuecyr-bold', 'Arial', sans-serif, serif;
+  font-size: 1em;
+  line-height: 1;
+}
+.touch-contacts__wrap {
+  padding-top: 0.625em;
+  border-top: 1px solid #bcbcbc;
+  font-family: 'helveticaneuecyr-roman', 'Arial', sans-serif, serif;
+  font-size: 1em;
+  line-height: 1.375em;
+  color: #ffffff;
+}
+.touch-contacts__wrap b,
+.touch-contacts__wrap .order-call__button {
+  font-family: 'helveticaneuecyr-bold', 'Arial', sans-serif, serif;
+  font-size: inherit;
+  line-height: inherit;
+}
+.touch-address {
+  margin-bottom: 0.3125em;
+}
+@media only screen and (max-width: 1023px) {
+  
+}
+@media only screen and (max-width: 767px) {
+  .header__address {
+    width: 100%;
+    max-width: 100%;
+    float: left;
+    margin-left: 0;
+    font-size: 0.8125em;
+    margin-top: -0.5em;
+  }
+  .touch-menu__wrap {
+    display: block;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .header {
+    display: none;
+  }
+  .touch-menu__wrap {
+    display: block;
+  }
 }
 /* end header styles */
