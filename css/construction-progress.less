@@ -1,0 +1,125 @@
+@import 'lib/mixins';
+@import 'project_style';
+/* about page styles */
+
+.construction-progress-page{
+  .clearfix;
+  min-height: 420em/@bfz;
+
+  margin-top: 50em/@bfz;
+}
+
+.construction__view{
+  position: relative;
+  top:-50em/@bfz;
+  margin-bottom: -28em/@bfz;
+  white-space: nowrap;
+}
+
+@about-nav-width:215em/@bfz;
+
+.construction__wrap{
+  width: @about-nav-width;
+}
+
+.construction__nav{
+  float:left;
+  .border-box;
+  padding: 12em/@bfz 20em/@bfz 20em/@bfz 0;
+  margin-bottom: 20em/@bfz;
+
+  >li{
+    margin-bottom: 10em/@bfz;
+
+    &.active{
+
+      .construction__content{
+//        display: block;
+      }
+
+      .construction__link{
+        display: block;
+        color:@blue;
+        .helvetica-bold();
+      }
+    }
+  }
+}
+
+.construction__content{
+  position: absolute;
+  top:20em/@bfz;
+  right: 0;
+  left: @about-nav-width;
+  display: none;
+
+  &.js-show{
+    display: block;
+  }
+}
+
+.construction__title{
+  .helvetica-thin(36em/@bfz,1);
+  text-transform: uppercase;
+  margin-bottom: 5em/36;
+}
+
+
+
+
+
+//********       *******\\
+/* media */
+//********       *******//
+
+
+//******   iPad  *****\\
+@media only screen and (max-width: @ipad) {
+
+}
+//****** end iPad *****\\
+
+//******   tel  *****\\
+@media only screen and (max-width: @tel) {
+  
+  .construction__wrap{
+    width: 100%;
+  }
+  
+  .construction__nav{
+    padding: 0;
+    >li{
+      border-bottom: 1px solid #f7f7f7;
+      padding: 7em/14 @wrap-gutter-outer_ipad 7em/14;
+      margin-bottom: 0;
+      &.active{
+        background: #f7f7f7;
+        .construction__link{
+          margin-bottom: 5em/12;
+        }
+      }
+    }
+  }
+
+  .construction__content{
+    position: static;
+  }
+
+  .construction__title{
+    display: none;
+  }
+
+}
+//****** end tel *****\\
+
+//******   iPhone  *****\\
+@media only screen and (max-width: @iphone) {
+
+}
+//****** end iPhone *****\\
+
+
+
+
+
+/* end about page styles */

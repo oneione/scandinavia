@@ -23,7 +23,7 @@
   *display: inline;
 }
 .text-input,
-.button {
+.button-input {
   border: 0;
   background: none;
   outline: 0;

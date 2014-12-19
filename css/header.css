@@ -23,7 +23,9 @@
   *display: inline;
 }
 .text-input,
+.button-input,
 .button,
+.checkbox-button,
 .order-call__button {
   border: 0;
   background: none;
@@ -104,6 +106,58 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
+.checkbox-button-grad {
+  background: #f7f7f7;
+  /* Old browsers */
+
+  background: -moz-linear-gradient(top, #f7f7f7 0%, #e4e4e4 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(100%, #e4e4e4));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, #f7f7f7 0%, #e4e4e4 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, #f7f7f7 0%, #e4e4e4 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, #f7f7f7 0%, #e4e4e4 100%);
+  /* IE10+ */
+
+  background: linear-gradient(to bottom, #f7f7f7 0%, #e4e4e4 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f7f7', endColorstr='#e4e4e4', GradientType=0);
+  /* IE6-9 */
+
+}
+.checkbox-button-grad--active {
+  background: #52b8d0;
+  /* Old browsers */
+
+  background: -moz-linear-gradient(top, #52b8d0 0%, #5dd1ea 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #52b8d0), color-stop(100%, #5dd1ea));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, #52b8d0 0%, #5dd1ea 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, #52b8d0 0%, #5dd1ea 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, #52b8d0 0%, #5dd1ea 100%);
+  /* IE10+ */
+
+  background: linear-gradient(to bottom, #52b8d0 0%, #5dd1ea 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#52b8d0', endColorstr='#5dd1ea', GradientType=0);
+  /* IE6-9 */
+
+}
 h1,
 h2,
 h3,
@@ -125,7 +179,8 @@ a {
   -o-transition: color 0.2s ease;
   transition: color 0.2s ease;
 }
-a:hover {
+a:hover,
+a:focus {
   color: #00a0bc;
 }
 .page-content-wrap {
@@ -203,6 +258,94 @@ a:hover {
   text-align: center;
   vertical-align: middle;
   padding: 0.4em 0.8em;
+}
+.checkbox-button {
+  padding: 0 0.5em;
+  height: 1.75em;
+  font-family: 'helveticaneuecyr-roman', 'Arial', sans-serif, serif;
+  font-size: 1em;
+  line-height: 1.875;
+  text-align: center;
+  background: #f7f7f7;
+  /* Old browsers */
+
+  background: -moz-linear-gradient(top, #f7f7f7 0%, #e4e4e4 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(100%, #e4e4e4));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, #f7f7f7 0%, #e4e4e4 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, #f7f7f7 0%, #e4e4e4 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, #f7f7f7 0%, #e4e4e4 100%);
+  /* IE10+ */
+
+  background: linear-gradient(to bottom, #f7f7f7 0%, #e4e4e4 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f7f7', endColorstr='#e4e4e4', GradientType=0);
+  /* IE6-9 */
+
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1px;
+}
+.checkbox-button:active {
+  margin-top: 1px;
+  margin-bottom: 0;
+  box-shadow: 0 0px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0px 1px rgba(0, 0, 0, 0.2);
+}
+.checkbox-button.active {
+  margin-top: 1px;
+  color: #ffffff;
+  background: #52b8d0;
+  /* Old browsers */
+
+  background: -moz-linear-gradient(top, #52b8d0 0%, #5dd1ea 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #52b8d0), color-stop(100%, #5dd1ea));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, #52b8d0 0%, #5dd1ea 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, #52b8d0 0%, #5dd1ea 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, #52b8d0 0%, #5dd1ea 100%);
+  /* IE10+ */
+
+  background: linear-gradient(to bottom, #52b8d0 0%, #5dd1ea 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#52b8d0', endColorstr='#5dd1ea', GradientType=0);
+  /* IE6-9 */
+
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3) inset;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3) inset;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3) inset;
+}
+.checkbox-button.active:active {
+  margin-bottom: 1px;
+}
+.checkbox-button.active:hover,
+.checkbox-button.active:focus {
+  color: #ffffff;
+}
+.checkbox-button:hover,
+.checkbox-button:focus {
+  color: #000000;
 }
 @media only screen and (max-width: 1023px) {
   body {

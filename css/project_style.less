@@ -129,6 +129,29 @@ body{
 
 //common blocks:
 
+//grads:
+.checkbox-button-grad{
+  background: #f7f7f7; /* Old browsers */
+  background: -moz-linear-gradient(top,  #f7f7f7 0%, #e4e4e4 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f7f7), color-stop(100%,#e4e4e4)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #f7f7f7 0%,#e4e4e4 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #f7f7f7 0%,#e4e4e4 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #f7f7f7 0%,#e4e4e4 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #f7f7f7 0%,#e4e4e4 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#e4e4e4',GradientType=0 ); /* IE6-9 */
+}
+.checkbox-button-grad--active{
+  background: #52b8d0; /* Old browsers */
+  background: -moz-linear-gradient(top,  #52b8d0 0%, #5dd1ea 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#52b8d0), color-stop(100%,#5dd1ea)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #52b8d0 0%,#5dd1ea 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #52b8d0 0%,#5dd1ea 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #52b8d0 0%,#5dd1ea 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #52b8d0 0%,#5dd1ea 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52b8d0', endColorstr='#5dd1ea',GradientType=0 ); /* IE6-9 */
+}
+//end grads
+
 h1,h2,h3,h4,h5,h6 {
   font-weight: normal;
 }
@@ -142,7 +165,7 @@ a{
   text-decoration: none;
   .transition(color);
 
-  &:hover{
+  &:hover, &:focus{
     color:@blue;
   }
 
@@ -224,6 +247,51 @@ a{
     }
   }
 }
+
+
+//buttons:
+
+.button, .checkbox-button{
+  .button-input;
+}
+
+.checkbox-button{
+  padding: 0 8em/@bfz;
+  height: 28em/@bfz;
+
+  .helvetica-roman(1em,30/16);
+  text-align: center;
+
+  .checkbox-button-grad;
+  .border-radius(2px);
+  .box-shadow(0,1px,1px,rgba(0,0,0,0.3));
+  margin-bottom: 1px;
+
+  &:active{
+    margin-top: 1px;
+    margin-bottom: 0;
+    .box-shadow(0,0px,1px,rgba(0,0,0,0.2));
+  }
+
+  &.active{
+    margin-top: 1px;
+    color:@white;
+    .checkbox-button-grad--active;
+    .box-shadow(0,1px,1px,rgba(0,0,0,0.3),inset);
+    &:active{
+      margin-bottom: 1px;
+    }
+    &:hover, &:focus{
+      color:@white;
+    }
+  }
+
+  &:hover, &:focus{
+    color:@black;
+  }
+}
+
+//end buttons
 
 
 //@media:
