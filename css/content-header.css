@@ -68,6 +68,13 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'helveticaneuecyr-thin';
+  src: url('../fonts/helveticaneuecyr-thin-webfont.eot');
+  src: url('../fonts/helveticaneuecyr-thin-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/helveticaneuecyr-thin-webfont.woff') format('woff'), url('../fonts/helveticaneuecyr-thin-webfont.woff2') format('woff2'), url('../fonts/helveticaneuecyr-thin-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 @media only screen and (max-width: 1023px) and (min-width: 481px) {
   
 }
@@ -77,6 +84,7 @@ html {
 body {
   width: 100%;
   height: 100%;
+  min-height: 30em;
   font-family: 'helveticaneuecyr-roman', 'Arial', sans-serif, serif;
   font-size: 16px;
   line-height: 1.2;
@@ -116,12 +124,84 @@ a {
   -o-transition: color 0.2s ease;
   transition: color 0.2s ease;
 }
+a:hover {
+  color: #00a0bc;
+}
 .page-content-wrap {
-  padding: 0.9375em 2.8125em 3.75em;
+  position: relative;
+  padding: 0.9375em 2.8125em 1.25em;
   background: #fff;
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.14);
   -moz-box-shadow: 0 0 24px rgba(0, 0, 0, 0.14);
   -webkit-box-shadow: 0 0 24px rgba(0, 0, 0, 0.14);
+}
+.page-content {
+  position: relative;
+  padding: 1.25em 0 1.25em;
+}
+.pdf-icon {
+  width: 26px;
+  height: 30px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  zoom: 1;
+  *display: inline;
+  background: url('../img/sprite.png') no-repeat -80px 0;
+}
+.text-page-style h2 {
+  font-family: 'helveticaneuecyr-thin', 'Arial', sans-serif, serif;
+  font-size: 1.5em;
+  line-height: 1;
+  margin-bottom: 0.8333333333333334em;
+}
+.text-page-style h3 {
+  font-family: 'helveticaneuecyr-thin', 'Arial', sans-serif, serif;
+  font-size: 1.25em;
+  line-height: 1;
+  margin-bottom: 1em;
+}
+.text-page-style p,
+.text-page-style ul,
+.text-page-style blockquote {
+  margin-bottom: 1.25em;
+}
+.text-page-style img {
+  max-width: 100%;
+}
+.text-page-style ul li {
+  margin-bottom: 0.625em;
+}
+.text-page-style ul li:before {
+  content: '-';
+  margin-right: 0.3125em;
+}
+.text-page-style hr {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+}
+.text-page-style blockquote {
+  margin: 0 0 1.2em 1em;
+  padding-left: 0.6em;
+  border-left: 4px solid #aaa;
+}
+.text-page-style table {
+  width: 100%;
+  border-bottom: 2px solid #2D2D2D;
+  margin-bottom: 1.25em;
+}
+.text-page-style table tr:nth-child(odd) {
+  background: #00a0bc;
+}
+.text-page-style table tr:first-child {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.text-page-style table th,
+.text-page-style table td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.4em 0.8em;
 }
 @media only screen and (max-width: 1023px) {
   body {
@@ -255,7 +335,7 @@ a {
   position: absolute;
   top: 0;
   right: 0;
-  background: url('../img/touch-menu-ico.png') no-repeat center;
+  background: url('../img/sprite.png') no-repeat 0 0;
   display: none;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
@@ -280,6 +360,10 @@ a {
   }
 }
 @media only screen and (max-width: 480px) {
+  .content__logo-wrap {
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid #cccccc;
+  }
   .content__logo-wrap .img-wrap {
     max-width: 100%;
   }

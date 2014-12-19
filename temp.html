@@ -21,6 +21,32 @@
 </head>
 
 <body>
+    <!--style for touch-menu in header.less-->
+    <div class="touch-menu__wrap">
+        <nav class="touch-menu">
+            <ul>
+                <li><a href="about.html">О проекте</a></li>
+                <li><a href="choose-flat.html">Выбрать квартиру</a></li>
+                <li><a href="about-company.html">Застройщик</a></li>
+                <li><a href="documents.html">Документы</a></li>
+                <li><a href="construction-progress.html">Ход строительства</a></li>
+                <li><a href="mortgage.html">Ипотека</a></li>
+                <li><a href="promo.html">Акции</a></li>
+                <li><a href="contacts">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="touch-contacts__wrap">
+            <div class="touch-tel">
+                <p><b>Офис продаж</b></p>
+                <p>(8162) 66-07-77</p>
+            </div>
+            <div class="touch-address">
+                <p>г. Великий Новгород,</p>
+                <p>ул. Большая Московская, 20/4</p>
+            </div>
+            <p><a class="order-call__button order-call__button--touch" href="#">Заказать звонок</a></p>
+        </div>
+    </div>
 
     <div class="main-wrap">
 
@@ -39,7 +65,7 @@
                     </div>
 
                     <div class="header__address">
-                        <p>г. Великий Новгород,<br/>ул. Большая Московская, 20/4</p>
+                        <p>г. Великий Новгород, ул. Большая Московская, 20/4</p>
                     </div>
 
                 </div>
@@ -54,13 +80,15 @@
 
                     <header class="content-header">
                         <div class="content__logo-wrap">
-                            <a href="index.html"><img src="img/logo.png" alt="River House"/></a>
+                            <div class="img-wrap">
+                                <a href="index.html"><img src="img/logo.png" alt="River House"/></a>
+                            </div>
                         </div>
                         <nav class="main-menu">
                             <ul>
                                 <li><a href="about.html">О проекте</a></li>
                                 <li><a href="choose-flat.html">Выбрать квартиру</a></li>
-                                <li><a href="about-company.html">О застройщике</a></li>
+                                <li><a href="about-company.html">Застройщик</a></li>
                                 <li><a href="documents.html">Документы</a></li>
                                 <li><a href="construction-progress.html">Ход строительства</a></li>
                                 <li><a href="mortgage.html">Ипотека</a></li>
@@ -68,6 +96,9 @@
                                 <li><a href="contacts">Контакты</a></li>
                             </ul>
                         </nav>
+
+                        <a class="touch-menu-control" href="#"></a>
+
                     </header>
 
                     <div class="page-content">
@@ -77,9 +108,8 @@
                 </div><!-- end page-content-wrap -->
             </div><!-- end wrap -->
         </section><!-- end page-wrap -->
-
+        <div class="push"></div>
     </div> <!-- end main-wrap -->
-
 
     <footer class="footer">
         <div class="wrap">
@@ -88,6 +118,9 @@
                 <div class="footer__contacts-wrap">
                     <div class="footer__logo-company">
                         <a href="#" target="_blank"><img src="img/logo-company.png" alt="Skandinavia"/></a>
+                    </div>
+                    <div class="footer__logo-company footer__logo-company--tel">
+                        <a href="#" target="_blank"><img src="img/logo-company_320.png" alt="Skandinavia"/></a>
                     </div>
                     <ul class="footer__contacts">
                         <li>

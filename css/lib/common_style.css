@@ -37,8 +37,8 @@ body, button, input, select, textarea { font-family: sans-serif; color: #222; }
  * Also: hot pink! (or customize the background color to match your design)
  */
 
-::-moz-selection { background: #01729a; color: #fff; text-shadow: none; }
-::selection { background: #01729a; color: #fff; text-shadow: none; }
+::-moz-selection { background: rgba(0,160,188,0.8); color: #fff; text-shadow: none; }
+::selection { background: rgba(0,160,188,0.8); color: #fff; text-shadow: none; }
 
 
 /* =============================================================================

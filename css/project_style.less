@@ -45,6 +45,17 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'helveticaneuecyr-thin';
+  src: url('../fonts/helveticaneuecyr-thin-webfont.eot');
+  src: url('../fonts/helveticaneuecyr-thin-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/helveticaneuecyr-thin-webfont.woff') format('woff'),
+  url('../fonts/helveticaneuecyr-thin-webfont.woff2') format('woff2'),
+  url('../fonts/helveticaneuecyr-thin-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 //fonts mixins
 .tnr(@font-size: inherit, @line-height: inherit){font-family: "Times New Roman", Times, serif;  font-size:@font-size; line-height:@line-height; }
@@ -54,7 +65,8 @@
 
 .helvetica-bold(@font-size: inherit, @line-height: inherit){font-family: 'helveticaneuecyr-bold', 'Arial', sans-serif, serif; font-size:@font-size; line-height:@line-height; }
 .helvetica-roman(@font-size: inherit, @line-height: inherit){font-family: 'helveticaneuecyr-roman', 'Arial', sans-serif, serif; font-size:@font-size; line-height:@line-height; }
-.helvetica-light(@font-size: inherit, @line-height: inherit){font-family: 'helveticaneuecyr-roman', 'Arial', sans-serif, serif; font-size:@font-size; line-height:@line-height; }
+.helvetica-light(@font-size: inherit, @line-height: inherit){font-family: 'helveticaneuecyr-light', 'Arial', sans-serif, serif; font-size:@font-size; line-height:@line-height; }
+.helvetica-thin(@font-size: inherit, @line-height: inherit){font-family: 'helveticaneuecyr-thin', 'Arial', sans-serif, serif; font-size:@font-size; line-height:@line-height; }
 //end fonts
 
 //layout settings:
@@ -91,8 +103,9 @@ html{
 body{
   width:100%;
   height:100%;
+  min-height: 480em/@bfz;
 
-  .helvetica-light(@bfz,1.2);
+  .helvetica-roman(@bfz,1.2);
   color:@black;
   background: @blue;
 
@@ -128,14 +141,89 @@ b, strong {
 a{
   text-decoration: none;
   .transition(color);
+
+  &:hover{
+    color:@blue;
+  }
+
 }
 
 .page-content-wrap{
-  padding: 15em/@bfz @wrap-gutter 60em/@bfz;
+  position: relative;
+  padding: 15em/@bfz @wrap-gutter 20em/@bfz;
   background: #fff;
   .box-shadow(0,0,24px,rgba(0,0,0,0.14));
 }
 
+.page-content{
+  position: relative;
+  padding: 20em/@bfz 0 20em/@bfz;
+}
+
+.pdf-icon{
+  width: 26px;
+  height: 30px;
+  .inline-block;
+  .sprite(80px,0);
+}
+
+.text-page-style{
+  h2{
+    .helvetica-thin(24em/@bfz,1);
+    margin-bottom: 20em/24;
+  }
+  h3{
+    .helvetica-thin(20em/@bfz,1);
+    margin-bottom: 20em/20;
+  }
+  p,ul,blockquote{
+    margin-bottom: 20em/@bfz;
+  }
+  img{
+    max-width: 100%;
+  }
+  ul{
+    li{
+      margin-bottom: 10em/@bfz;
+      &:before{
+        content: '-';
+        margin-right: 5em/@bfz;
+      }
+    }
+  }
+  hr{
+    margin-top: 20em/@bfz;
+    margin-bottom: 20em/@bfz;
+  }
+  blockquote{
+    margin: 0 0 1.2em 1em;
+    padding-left: 0.6em;
+    border-left: 4px solid #aaa;
+  }
+
+
+  table{
+    width: 100%;
+    border-bottom: 2px solid #2D2D2D;
+    margin-bottom: 20em/@bfz;
+
+    tr:nth-child(odd){
+      //      background: #6AB329;
+      background: @blue;
+    }
+
+    tr:first-child{
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    th, td{
+      text-align: center;
+      vertical-align: middle;
+      padding: 0.4em 0.8em;
+    }
+  }
+}
 
 
 //@media:
