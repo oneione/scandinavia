@@ -157,6 +157,58 @@ body {
   /* IE6-9 */
 
 }
+.flat-range-grad {
+  background: #b5b5b5;
+  /* Old browsers */
+
+  background: -moz-linear-gradient(top, #b5b5b5 0%, #ededed 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b5b5b5), color-stop(100%, #ededed));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, #b5b5b5 0%, #ededed 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, #b5b5b5 0%, #ededed 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, #b5b5b5 0%, #ededed 100%);
+  /* IE10+ */
+
+  background: linear-gradient(to bottom, #b5b5b5 0%, #ededed 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b5b5b5', endColorstr='#ededed', GradientType=0);
+  /* IE6-9 */
+
+}
+.flat-range-grad--active {
+  background: #509aa5;
+  /* Old browsers */
+
+  background: -moz-linear-gradient(top, #509aa5 0%, #4ebad7 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #509aa5), color-stop(100%, #4ebad7));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, #509aa5 0%, #4ebad7 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, #509aa5 0%, #4ebad7 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, #509aa5 0%, #4ebad7 100%);
+  /* IE10+ */
+
+  background: linear-gradient(to bottom, #509aa5 0%, #4ebad7 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#509aa5', endColorstr='#4ebad7', GradientType=0);
+  /* IE6-9 */
+
+}
 h1,
 h2,
 h3,
@@ -211,15 +263,22 @@ a:focus {
   margin-bottom: 0.8333333333333334em;
 }
 .text-page-style h3 {
-  font-family: 'helveticaneuecyr-thin', 'Arial', sans-serif, serif;
-  font-size: 1.25em;
+  font-family: 'helveticaneuecyr-bold', 'Arial', sans-serif, serif;
+  font-size: 1em;
   line-height: 1;
-  margin-bottom: 1em;
+  margin-bottom: 0.9375em;
 }
 .text-page-style p,
 .text-page-style ul,
 .text-page-style blockquote {
   margin-bottom: 1.25em;
+}
+.text-page-style b,
+.text-page-style strong {
+  font-weight: normal;
+  font-family: 'helveticaneuecyr-bold', 'Arial', sans-serif, serif;
+  font-size: inherit;
+  line-height: inherit;
 }
 .text-page-style img {
   max-width: 100%;
@@ -258,9 +317,21 @@ a:focus {
   vertical-align: middle;
   padding: 0.4em 0.8em;
 }
-.checkbox-button {
+.text-page-style .subscription {
+  font-size: 0.75em;
+}
+.text-page-style .subscription a {
+  text-decoration: underline;
+}
+.checkbox-button,
+.radio-button {
   padding: 0 0.5em;
   height: 1.75em;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  zoom: 1;
+  *display: inline;
   font-family: 'helveticaneuecyr-roman', 'Arial', sans-serif, serif;
   font-size: 1em;
   line-height: 1.875;
@@ -297,14 +368,16 @@ a:focus {
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
   margin-bottom: 1px;
 }
-.checkbox-button:active {
+.checkbox-button:active,
+.radio-button:active {
   margin-top: 1px;
   margin-bottom: 0;
   box-shadow: 0 0px 1px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 0px 1px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 0px 1px rgba(0, 0, 0, 0.2);
 }
-.checkbox-button.active {
+.checkbox-button.active,
+.radio-button.active {
   margin-top: 1px;
   color: #ffffff;
   background: #52b8d0;
@@ -335,16 +408,97 @@ a:focus {
   -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3) inset;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3) inset;
 }
-.checkbox-button.active:active {
+.checkbox-button.active:active,
+.radio-button.active:active {
   margin-bottom: 1px;
 }
 .checkbox-button.active:hover,
-.checkbox-button.active:focus {
+.radio-button.active:hover,
+.checkbox-button.active:focus,
+.radio-button.active:focus {
   color: #ffffff;
 }
 .checkbox-button:hover,
-.checkbox-button:focus {
+.radio-button:hover,
+.checkbox-button:focus,
+.radio-button:focus {
   color: #000000;
+}
+.button {
+  height: 1.75em;
+  padding: 0 2.5em;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  text-align: center;
+  line-height: 1.9375em;
+  margin-bottom: 2px;
+}
+.button.button--blue {
+  color: #ffffff;
+  background: #2fb9e2;
+  box-shadow: 0 3px 0 #0fa9d1;
+  -moz-box-shadow: 0 3px 0 #0fa9d1;
+  -webkit-box-shadow: 0 3px 0 #0fa9d1;
+}
+.button.button--blue:active {
+  margin-top: 2px;
+  margin-bottom: 0;
+  box-shadow: 0 1px 0 #0fa9d1;
+  -moz-box-shadow: 0 1px 0 #0fa9d1;
+  -webkit-box-shadow: 0 1px 0 #0fa9d1;
+}
+.button.button--red {
+  color: #ffffff;
+  background: #ea3818;
+  box-shadow: 0 3px 0 #dc1701;
+  -moz-box-shadow: 0 3px 0 #dc1701;
+  -webkit-box-shadow: 0 3px 0 #dc1701;
+}
+.button.button--red:active {
+  margin-top: 2px;
+  margin-bottom: 0;
+  box-shadow: 0 1px 0 #dc1701;
+  -moz-box-shadow: 0 1px 0 #dc1701;
+  -webkit-box-shadow: 0 1px 0 #dc1701;
+}
+.column-wrap {
+  *zoom: 1;
+  padding-top: 1.25em;
+  margin-bottom: 1.25em;
+}
+.column-wrap:before,
+.column-wrap:after {
+  content: " ";
+  display: table;
+}
+.column-wrap:after {
+  clear: both;
+}
+.column-wrap:first-child {
+  padding-top: 0;
+}
+.column-wrap.top-divider {
+  border-top: 1px solid #ccc;
+}
+.left-column {
+  float: left;
+  width: 50%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-right: 1.25em;
+}
+.right-column {
+  float: right;
+  width: 50%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 0.625em;
+}
+.right-column.left-divider {
+  border-left: 1px solid #ccc;
 }
 @media only screen and (max-width: 1023px) {
   body {
@@ -378,6 +532,19 @@ a:focus {
     -ms-transform: rotate(90deg);
     -o-transform: rotate(90deg);
     transform: rotate(90deg);
+  }
+  .left-column,
+  .right-column {
+    float: none;
+    width: auto;
+    padding: 0;
+    border-left: 0;
+  }
+  .left-column.left-divider,
+  .right-column.left-divider {
+    border-left: 0;
+    border-top: 1px solid #ccc;
+    padding-top: 1.25em;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -486,6 +653,7 @@ a:focus {
 }
 .developed-by a:hover {
   text-decoration: underline;
+  color: #ffffff;
 }
 .main-wrap {
   min-height: 100%;

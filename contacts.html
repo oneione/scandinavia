@@ -20,7 +20,7 @@
     <script src="js/modernizr-2.6.2.min.js"></script>
 </head>
 
-<body class="home">
+<body>
     <!--style for touch-menu in header.less-->
     <div class="touch-menu__wrap">
         <nav class="touch-menu">
@@ -32,7 +32,7 @@
                 <li><a href="construction-progress.html">Ход строительства</a></li>
                 <li><a href="mortgage.html">Ипотека</a></li>
                 <li><a href="promo.html">Акции</a></li>
-                <li><a  href="contacts.html">Контакты</a></li>
+                <li class="active"><a href="contacts.html">Контакты</a></li>
             </ul>
         </nav>
         <div class="touch-contacts__wrap">
@@ -93,7 +93,7 @@
                                 <li><a href="construction-progress.html">Ход строительства</a></li>
                                 <li><a href="mortgage.html">Ипотека</a></li>
                                 <li><a href="promo.html">Акции</a></li>
-                                <li><a href="contacts.html">Контакты</a></li>
+                                <li class="active"><a href="contacts.html">Контакты</a></li>
                             </ul>
                         </nav>
 
@@ -101,30 +101,69 @@
 
                     </header>
 
-                    <div class="page-content">
-
-                        <div class="main-slider fotorama"
-                             data-width="100%"
-                             data-height="100%"
-                             data-maxwidth="1600"
-                             data-maxheight="1600"
-                             data-minheight="200"
-                             data-arrows="false" data-fit="cover">
-
-                            <img src="img/slider-pic1.jpg" alt=""/>
-                            <img src="img/slider-pic2.jpg" alt=""/>
-                            <img src="img/slider-pic3.jpg" alt=""/>
-                        </div>
+                    <div class="page-content contacts-page text-page-style">
+                        <!--styles for columns in project_style.less-->
+                        <div class="column-wrap contacts-main">
+                            <div class="left-column">
+                                <h3>Отдел продаж в Великом Новгороде</h3>
+                                <p>Телефоны офиса продаж: <br/>
+                                    (8162) 660-777, (8162) 92-25-92, <br/>
+                                    E-mail: <a target="_blank" href="mailto:info@skv53.ru">info@skv53.ru</a> <br/>
+                                    Адрес: г.Великий Новгород, <br/>
+                                    улица Большая Московская, дом 20/4 <br/>
+                                    Понедельник- пятница: с 09.00 до 18.00
+                                </p>
+                                <p>Афанасьева Ирина Владимировна <br/>
+                                    Руководитель Департамента продаж и маркетинга <br/>
+                                    г.Псков  и г.Великий Новгород <br/>
+                                    tel +8 (8112) 72-05-05 <br/>
+                                    <a target="_blank" href="mailto:afanaseva@skv60.ru">afanaseva@skv60.ru</a>
+                                </p>
+                                <p>Ерастов Сергей Николаевич <br/>
+                                    Руководитель отдела продаж г.Великий Новгород <br/>
+                                    tel +7(921) 024-22-10 <br/>
+                                    <a target="_blank" href="maito:info@skv53.ru">info@skv53.ru</a>
+                                </p>
+                                <p>
+                                    Дюсьменева Юлия Петровна <br/>
+                                    Менеджер отдела продаж <br/>
+                                    tel +7 (8162) 660-777 <br/>
+                                    E-mail: <a target="_blank" href="mailto:info@skv53.ru">info@skv53.ru</a>
+                                </p>
+                            </div><!-- end left-column -->
+                            <div class="right-column contacts-map-wrap">
+                                <div class="contacts-map" id="contacts-map"></div>
+                            </div><!-- end right-column -->
+                        </div><!-- end column-wrap -->
+                        <div class="column-wrap top-divider">
+                            <div class="left-column">
+                                <p>
+                                    <strong>Санкт-Петербург, </strong> <br/>
+                                    Набережная реки Фонтанки, д.38 <br/>
+                                    8(812) 320-65-67
+                                </p>
+                                <p><strong>Псков,</strong> <br/>
+                                    ул.Алмазная, д.10 <br/>
+                                    8(8112) 72-05-05
+                                </p>
+                            </div><!-- end left-column -->
+                            <div class="right-column">
+                                <p>
+                                    <strong>Единый телефон отдела <br/>
+                                    продаж недвижимости</strong> <br/>
+                                    8 (800) 100-13-25
+                                </p>
+                            </div><!-- end right-column -->
+                        </div><!-- end column-wrap -->
 
                     </div>
 
                 </div><!-- end page-content-wrap -->
             </div><!-- end wrap -->
         </section><!-- end page-wrap -->
+        <div class="push"></div>
     </div> <!-- end main-wrap -->
 
-    <!--at home page push here-->
-    <div class="push"></div>
     <footer class="footer">
         <div class="wrap">
             <div class="footer__wrap">
@@ -171,8 +210,30 @@
         </div>
     </footer>
 
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&sensor=false"></script>
     <script src="js/jquery-1.10.2.min.js"></script>
     <script defer src="js/plugins.js"></script>
     <script defer src="js/script.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            riverHouse.ContactsMap({
+                mapWrap : document.getElementById('contacts-map'),
+                styled: false,
+                centerCoords: {
+                    lat: 58.518672,
+                    lon: 31.287316
+                },
+                marker: {
+                    coords: {
+                        lat: 58.518672,
+                        lon: 31.287316
+                    },
+                    title: "ул. Большая  Московская , д. 20/4"
+                },
+                zoom: 15
+            });
+        });
+    </script>
 </body>
 </html>

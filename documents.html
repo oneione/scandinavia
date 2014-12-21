@@ -20,7 +20,7 @@
     <script src="js/modernizr-2.6.2.min.js"></script>
 </head>
 
-<body class="home">
+<body>
     <!--style for touch-menu in header.less-->
     <div class="touch-menu__wrap">
         <nav class="touch-menu">
@@ -28,7 +28,7 @@
                 <li><a href="about.html">О проекте</a></li>
                 <li><a href="choose-flat.html">Выбрать квартиру</a></li>
                 <li><a href="about-company.html">Застройщик</a></li>
-                <li><a href="documents.html">Документы</a></li>
+                <li class="active"><a href="documents.html">Документы</a></li>
                 <li><a href="construction-progress.html">Ход строительства</a></li>
                 <li><a href="mortgage.html">Ипотека</a></li>
                 <li><a href="promo.html">Акции</a></li>
@@ -89,7 +89,7 @@
                                 <li><a href="about.html">О проекте</a></li>
                                 <li><a href="choose-flat.html">Выбрать квартиру</a></li>
                                 <li><a href="about-company.html">Застройщик</a></li>
-                                <li><a href="documents.html">Документы</a></li>
+                                <li class="active"><a href="documents.html">Документы</a></li>
                                 <li><a href="construction-progress.html">Ход строительства</a></li>
                                 <li><a href="mortgage.html">Ипотека</a></li>
                                 <li><a href="promo.html">Акции</a></li>
@@ -101,30 +101,40 @@
 
                     </header>
 
-                    <div class="page-content">
-
-                        <div class="main-slider fotorama"
-                             data-width="100%"
-                             data-height="100%"
-                             data-maxwidth="1600"
-                             data-maxheight="1600"
-                             data-minheight="200"
-                             data-arrows="false" data-fit="cover">
-
-                            <img src="img/slider-pic1.jpg" alt=""/>
-                            <img src="img/slider-pic2.jpg" alt=""/>
-                            <img src="img/slider-pic3.jpg" alt=""/>
-                        </div>
-
+                    <div class="page-content documents-page">
+                        <!--styles for columns in project_style.less-->
+                        <div class="column-wrap contacts-main">
+                            <div class="left-column">
+                                <ul class="documents-list">
+                                    <li>
+                                        <a target="_blank" href="#">
+                                            <i class="pdf-icon"></i>
+                                            <p>Проектная декларация от 23 апреля 2014 года на жилой дом по адресу: г.Великий Новгород, ул.Щусева, дом 11, корп.2</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="#">
+                                            <i class="pdf-icon"></i>
+                                            <p>Проектная декларация от 11 июля 2014 года на жилой дом по адресу: г.Великий Новгород, ул.Щусева, дом 11, корп.2 </p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="#">
+                                            <i class="pdf-icon"></i>
+                                            <p>Проектная декларация от 27 октября 2014 года на жилой дом по адресу: г.Великий Новгород, ул.Щусева, дом 11, корп.2 </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div><!-- end left-column -->
+                        </div><!-- end column-wrap -->
                     </div>
 
                 </div><!-- end page-content-wrap -->
             </div><!-- end wrap -->
         </section><!-- end page-wrap -->
+        <div class="push"></div>
     </div> <!-- end main-wrap -->
 
-    <!--at home page push here-->
-    <div class="push"></div>
     <footer class="footer">
         <div class="wrap">
             <div class="footer__wrap">

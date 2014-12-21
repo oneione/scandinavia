@@ -20,19 +20,19 @@
     <script src="js/modernizr-2.6.2.min.js"></script>
 </head>
 
-<body class="home">
+<body>
     <!--style for touch-menu in header.less-->
     <div class="touch-menu__wrap">
         <nav class="touch-menu">
             <ul>
                 <li><a href="about.html">О проекте</a></li>
-                <li><a href="choose-flat.html">Выбрать квартиру</a></li>
+                <li class="active"><a href="choose-flat.html">Выбрать квартиру</a></li>
                 <li><a href="about-company.html">Застройщик</a></li>
                 <li><a href="documents.html">Документы</a></li>
                 <li><a href="construction-progress.html">Ход строительства</a></li>
                 <li><a href="mortgage.html">Ипотека</a></li>
                 <li><a href="promo.html">Акции</a></li>
-                <li><a  href="contacts.html">Контакты</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
             </ul>
         </nav>
         <div class="touch-contacts__wrap">
@@ -47,8 +47,8 @@
             <p><a class="order-call__button order-call__button--touch" href="#">Заказать звонок</a></p>
         </div>
     </div>
-
-    <div class="main-wrap">
+    <!--flat page class here! for print styles!-->
+    <div class="main-wrap main-flat-wrap">
 
         <header class="header">
             <div class="wrap">
@@ -87,7 +87,7 @@
                         <nav class="main-menu">
                             <ul>
                                 <li><a href="about.html">О проекте</a></li>
-                                <li><a href="choose-flat.html">Выбрать квартиру</a></li>
+                                <li class="active"><a href="choose-flat.html">Выбрать квартиру</a></li>
                                 <li><a href="about-company.html">Застройщик</a></li>
                                 <li><a href="documents.html">Документы</a></li>
                                 <li><a href="construction-progress.html">Ход строительства</a></li>
@@ -101,30 +101,90 @@
 
                     </header>
 
-                    <div class="page-content">
-
-                        <div class="main-slider fotorama"
-                             data-width="100%"
-                             data-height="100%"
-                             data-maxwidth="1600"
-                             data-maxheight="1600"
-                             data-minheight="200"
-                             data-arrows="false" data-fit="cover">
-
-                            <img src="img/slider-pic1.jpg" alt=""/>
-                            <img src="img/slider-pic2.jpg" alt=""/>
-                            <img src="img/slider-pic3.jpg" alt=""/>
+                    <div class="page-content flat-page">
+                        <!--скрипт для кнопки "распечатать" внизу страницы-->
+                        <div class="flat__buttons">
+                            <a id="print-button" class="button button--blue" href="#">Распечатать</a>
+                            <a class="button button--blue" href="#">Отправить на почту</a>
                         </div>
+
+                        <article class="flat">
+                            <h1 class="flat__title">2-комнатная квартира</h1>
+
+                            <div class="flat__info">
+                                <div class="flat__info-block">
+                                    <p>Этаж: 3/9</p>
+
+                                    <p>Общая площадь — 22.19 м²</p>
+
+                                    <p>Жилая площадь — 15.84 м²</p>
+
+                                    <p><b>Цена: 2 601 600 р.</b></p>
+                                </div>
+                                <div class="flat__info-block">
+                                    <p>Очередь строительства: 1</p>
+
+                                    <p>Адрес: Великий Новгород</p>
+
+                                    <p>Ул.Щусева 11, корпус 2</p>
+
+                                    <p>Срок сдачи: 4 квартал 2014 г.</p>
+                                </div>
+                                <div class="flat__info-block flat__info-block--btn">
+                                    <p><b>Цена: 2 601 600 р.</b></p>
+                                    <p><a class="button button--red" href="#">Забронировать</a></p>
+                                </div>
+                            </div>
+                            <div class="flat__plan">
+                                <div class="img-wrap">
+                                    <img src="img/flat-plan.png" alt=""/>
+                                </div>
+                            </div>
+                            <div class="flat__model">
+                                <div class="img-wrap">
+                                    <img src="img/flat-maker.png" alt=""/>
+                                </div>
+                            </div>
+                        </article>
+
+                        <div class="complex__schemes">
+                            <div class="flat-scheme-wrap">
+                                <div class="img-wrap">
+                                    <img src="img/flat-scheme.png" alt="Схема комплекса"/>
+                                    <a class="scheme-selection scheme-selection--first" href="choose-flat-scheme.html"></a>
+                                    <a class="scheme-selection scheme-selection--second show-selection" href="choose-flat-scheme.html"></a>
+                                </div>
+                            </div>
+                            <div class="floor-scheme-wrap">
+                                <div class="img-wrap">
+                                    <img src="img/floor-plan.png" alt=""/>
+                                </div>
+                            </div>
+                        </div><!-- complex__shemes -->
+
+                        <div class="flat__contacts">
+                            <h2 class="flat__contacts__title flat__contacts-block">Контакты <br/>
+                                отдела продаж</h2>
+                            <div class="flat__contacts-block">
+                                <p class="tel"><b>8 800 100-13-25</b></p>
+                                <p class="subscription">Бесплатный звонок <br/>
+                                    со всех телефонов РФ </p>
+                            </div>
+                            <div class="flat__contacts-block">
+                                <p class="tel">(8162) <b>66-07-77</b></p>
+                                <p class="subscription">г. Великий Новгород, <br/>
+                                    ул.Большая Московская, 20/4</p>
+                            </div>
+                        </div><!-- flat__contacts -->
 
                     </div>
 
                 </div><!-- end page-content-wrap -->
             </div><!-- end wrap -->
         </section><!-- end page-wrap -->
+        <div class="push"></div>
     </div> <!-- end main-wrap -->
 
-    <!--at home page push here-->
-    <div class="push"></div>
     <footer class="footer">
         <div class="wrap">
             <div class="footer__wrap">
@@ -174,5 +234,14 @@
     <script src="js/jquery-1.10.2.min.js"></script>
     <script defer src="js/plugins.js"></script>
     <script defer src="js/script.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('#print-button').click(function(e){
+                e.preventDefault();
+                window.print();
+            });
+        });
+    </script>
 </body>
 </html>
