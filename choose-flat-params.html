@@ -482,5 +482,46 @@
     <script src="js/jquery-1.10.2.min.js"></script>
     <script defer src="js/plugins.js"></script>
     <script defer src="js/script.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            //uses jQuery UI library!
+
+            //price range:
+            $( "#price-range" ).slider({
+                range: true, //double range
+                min:1000000,
+                max:5000000,
+                step:100000,
+                change: function(e, ui){
+                    console.log('Введено от: ' + ui.values[0] + ', до ' + ui.values[1]);
+                }
+            });
+
+            //square range:
+            $( "#square-range" ).slider({
+                range: true, //double range
+                min:50,
+                max:100,
+                step:1,
+                change: function(e, ui){
+                    console.log('Введено от: ' + ui.values[0] + ', до ' + ui.values[1]);
+                }
+            });
+
+            //floor range:
+            $( "#floor-range" ).slider({
+                range: true, //double range
+                min:1,
+                max:14,
+                step:1,
+                change: function(e, ui){
+                    console.log('Введено от: ' + ui.values[0] + ', до ' + ui.values[1]);
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>
