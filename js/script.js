@@ -58,4 +58,11 @@
         }
     });
 
+
+    if($('.fancybox-elem').fancybox){
+        $('.fancybox-elem').fancybox({
+            padding:0
+        });
+    }
+
 })(jQuery);

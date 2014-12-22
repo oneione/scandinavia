@@ -27,7 +27,7 @@
             <ul>
                 <li><a href="about.html">О проекте</a></li>
                 <li><a href="choose-flat.html">Выбрать квартиру</a></li>
-                <li><a href="about-company.html">Застройщик</a></li>
+                <li><a target="_blank" href="http://oneione.github.io/Skandinavia_outer/">Застройщик</a></li>
                 <li><a href="documents.html">Документы</a></li>
                 <li><a href="construction-progress.html">Ход строительства</a></li>
                 <li><a href="mortgage.html">Ипотека</a></li>
@@ -88,7 +88,7 @@
                             <ul>
                                 <li><a href="about.html">О проекте</a></li>
                                 <li class="active"><a href="choose-flat.html">Выбрать квартиру</a></li>
-                                <li><a href="about-company.html">Застройщик</a></li>
+                                <li><a target="_blank" href="http://oneione.github.io/Skandinavia_outer/">Застройщик</a></li>
                                 <li><a href="documents.html">Документы</a></li>
                                 <li><a href="construction-progress.html">Ход строительства</a></li>
                                 <li><a href="mortgage.html">Ипотека</a></li>
@@ -151,8 +151,8 @@
 
                                     <div class="flat-range" id="price-range"></div>
                                     <p class="flat-range__subscription">
-                                        <span class="flat-range__min">1 000 000 руб.</span>
-                                        <span class="flat-range__max">5 000 000 руб.</span>
+                                        <span class="flat-range__min"><span class="value">1 000 000</span> руб.</span>
+                                        <span class="flat-range__max"><span class="value">1 000 000</span> руб.</span>
                                     </p>
                                 </div><!-- end flat-search__param-wrap -->
 
@@ -161,8 +161,8 @@
 
                                     <div class="flat-range" id="square-range"></div>
                                     <p class="flat-range__subscription">
-                                        <span class="flat-range__min">50 м<sup>2</sup></span>
-                                        <span class="flat-range__max">100 м<sup>2</sup></span>
+                                        <span class="flat-range__min"><span class="value">50</span> м<sup>2</sup></span>
+                                        <span class="flat-range__max"><span class="value">50</span> м<sup>2</sup></span>
                                     </p>
                                 </div><!-- end flat-search__param-wrap -->
 
@@ -171,8 +171,8 @@
 
                                     <div class="flat-range" id="floor-range"></div>
                                     <p class="flat-range__subscription">
-                                        <span class="flat-range__min">1</span>
-                                        <span class="flat-range__max">14</span>
+                                        <span class="flat-range__min"><span class="value">1</span></span>
+                                        <span class="flat-range__max"><span class="value">1</span></span>
                                     </p>
                                 </div><!-- end flat-search__param-wrap -->
 
@@ -495,6 +495,12 @@
                 max:5000000,
                 step:100000,
                 change: function(e, ui){
+                    var $wrap = $(this).parent(),
+                            $minElem = $wrap.find('.flat-range__min .value'),
+                            $maxElem = $wrap.find('.flat-range__max .value');
+
+                    $minElem.text(ui.values[0]);
+                    $maxElem.text(ui.values[1]);
                     console.log('Введено от: ' + ui.values[0] + ', до ' + ui.values[1]);
                 }
             });
@@ -506,6 +512,12 @@
                 max:100,
                 step:1,
                 change: function(e, ui){
+                    var $wrap = $(this).parent(),
+                            $minElem = $wrap.find('.flat-range__min .value'),
+                            $maxElem = $wrap.find('.flat-range__max .value');
+
+                    $minElem.text(ui.values[0]);
+                    $maxElem.text(ui.values[1]);
                     console.log('Введено от: ' + ui.values[0] + ', до ' + ui.values[1]);
                 }
             });
@@ -517,6 +529,12 @@
                 max:14,
                 step:1,
                 change: function(e, ui){
+                    var $wrap = $(this).parent(),
+                            $minElem = $wrap.find('.flat-range__min .value'),
+                            $maxElem = $wrap.find('.flat-range__max .value');
+
+                    $minElem.text(ui.values[0]);
+                    $maxElem.text(ui.values[1]);
                     console.log('Введено от: ' + ui.values[0] + ', до ' + ui.values[1]);
                 }
             });

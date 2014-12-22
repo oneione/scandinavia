@@ -56,7 +56,6 @@
     bottom:0;
     padding: 0;
   }
-
   .main-slider{
     position: absolute;
     left: 0;
@@ -117,6 +116,43 @@
         top:0;
         bottom:auto;
         height: 400em/@bfz;
+      }
+
+
+      .page-content{
+        position: absolute;
+        left:@wrap-gutter-outer_ipad;
+        right: @wrap-gutter-outer_ipad;
+        top:131em/@bfz;
+        bottom:auto;
+        padding: 0;
+        height: 20em;
+      }
+
+      .main-slider{
+        position: absolute;
+        left: 0;
+        right:0;
+        height: 100%;
+        .fotorama__wrap{
+          position: static;
+          left: 0;
+          right: 0;
+          top: 0;
+          height: 20em !important;
+        }
+        .fotorama__stage{
+          height: 18em !important;
+          position: static;
+          top:0;
+          bottom:@main-slider-nav-height;
+          left: 0;
+          right: 0;
+        }
+        .fotorama__nav-wrap{
+          position: absolute;
+          bottom:0;
+        }
       }
   }
   //****** end IPhone *****\\

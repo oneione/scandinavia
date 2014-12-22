@@ -675,5 +675,39 @@ a:focus {
     bottom: auto;
     height: 25em;
   }
+  .home .page-content {
+    position: absolute;
+    left: 0.625em;
+    right: 0.625em;
+    top: 8.1875em;
+    bottom: auto;
+    padding: 0;
+    height: 20em;
+  }
+  .home .main-slider {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+  }
+  .home .main-slider .fotorama__wrap {
+    position: static;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 20em !important;
+  }
+  .home .main-slider .fotorama__stage {
+    height: 18em !important;
+    position: static;
+    top: 0;
+    bottom: 1.875em;
+    left: 0;
+    right: 0;
+  }
+  .home .main-slider .fotorama__nav-wrap {
+    position: absolute;
+    bottom: 0;
+  }
 }
 /* end main page styles */
